@@ -38,7 +38,12 @@
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "lint": "eslint src",
     "test": "vscode-test",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "release": "changelogen --release --noAuthors",
+    "release:major": "changelogen --release --noAuthors --major",
+    "release:minor": "changelogen --release --noAuthors --minor",
+    "release:patch": "changelogen --release --noAuthors --patch",
+    "release:dry": "changelogen --noAuthors --no-output"
   },
   "devDependencies": {
     "@rspack/cli": "^1.2.8",
@@ -51,6 +56,7 @@
     "@typescript-eslint/parser": "^8.25.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
+    "changelogen": "^0.6.1",
     "eslint": "^9.21.0",
     "typescript": "^5.7.3"
   }
